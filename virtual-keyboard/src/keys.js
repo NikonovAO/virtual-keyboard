@@ -82,8 +82,8 @@ export const keysRowE = [
     lowerCaseValue: { en: 'Backspace', ru: 'Backspace' },
     upperCaseValue: { en: 'Backspace', ru: 'Backspace' },
     type: 'functional',
-  }
-]
+  },
+];
 
 export const keysRowD = [
   {
@@ -162,15 +162,15 @@ export const keysRowD = [
     name: 'BracketRight',
     lowerCaseValue: { en: ']', ru: 'ъ' },
     upperCaseValue: { en: '}', ru: 'Ъ' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'Backslash',
     lowerCaseValue: { en: '\\', ru: '\\' },
     upperCaseValue: { en: '|', ru: '/' },
-    type: 'alphanumeric'
-  }
-] 
+    type: 'alphanumeric',
+  },
+];
 
 export const keysRowC = [
   {
@@ -183,75 +183,75 @@ export const keysRowC = [
     name: 'KeyA',
     lowerCaseValue: { en: 'a', ru: 'ф' },
     upperCaseValue: { en: 'A', ru: 'Ф' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'KeyS',
     lowerCaseValue: { en: 's', ru: 'ы' },
     upperCaseValue: { en: 'S', ru: 'Ы' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'KeyD',
     lowerCaseValue: { en: 'd', ru: 'в' },
     upperCaseValue: { en: 'D', ru: 'В' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'KeyF',
     lowerCaseValue: { en: 'f', ru: 'а' },
     upperCaseValue: { en: 'F', ru: 'А' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'KeyG',
     lowerCaseValue: { en: 'g', ru: 'п' },
     upperCaseValue: { en: 'G', ru: 'П' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'KeyH',
     lowerCaseValue: { en: 'h', ru: 'р' },
     upperCaseValue: { en: 'H', ru: 'Р' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'KeyJ',
     lowerCaseValue: { en: 'j', ru: 'о' },
     upperCaseValue: { en: 'J', ru: 'О' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'KeyK',
     lowerCaseValue: { en: 'k', ru: 'л' },
     upperCaseValue: { en: 'K', ru: 'Л' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'KeyL',
     lowerCaseValue: { en: 'l', ru: 'д' },
     upperCaseValue: { en: 'L', ru: 'Д' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'Semicolon',
     lowerCaseValue: { en: ';', ru: 'ж' },
     upperCaseValue: { en: ':', ru: 'Ж' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'Quote',
     lowerCaseValue: { en: "'", ru: 'э' },
     upperCaseValue: { en: '"', ru: 'Э' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'Enter',
     lowerCaseValue: { en: 'Enter', ru: 'Enter' },
     upperCaseValue: { en: 'Enter', ru: 'Enter' },
     type: 'functional',
-  }
-]
+  },
+];
 
 export const keysRowB = [
   {
@@ -264,75 +264,75 @@ export const keysRowB = [
     name: 'KeyZ',
     lowerCaseValue: { en: 'z', ru: 'я' },
     upperCaseValue: { en: 'Z', ru: 'Я' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'KeyX',
     lowerCaseValue: { en: 'x', ru: 'ч' },
     upperCaseValue: { en: 'X', ru: 'Ч' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'KeyC',
     lowerCaseValue: { en: 'c', ru: 'с' },
     upperCaseValue: { en: 'C', ru: 'С' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'KeyV',
     lowerCaseValue: { en: 'v', ru: 'м' },
     upperCaseValue: { en: 'V', ru: 'М' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'KeyB',
     lowerCaseValue: { en: 'b', ru: 'и' },
     upperCaseValue: { en: 'B', ru: 'И' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'KeyN',
     lowerCaseValue: { en: 'n', ru: 'т' },
     upperCaseValue: { en: 'N', ru: 'Т' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'KeyM',
     lowerCaseValue: { en: 'm', ru: 'ь' },
     upperCaseValue: { en: 'M', ru: 'Ь' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'Comma',
     lowerCaseValue: { en: ',', ru: 'б' },
     upperCaseValue: { en: '<', ru: 'Б' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'Period',
     lowerCaseValue: { en: '.', ru: 'ю' },
     upperCaseValue: { en: '>', ru: 'Ю' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'Slash',
     lowerCaseValue: { en: '/', ru: '.' },
     upperCaseValue: { en: '?', ru: ',' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'ArrowUp',
     lowerCaseValue: { en: '⯅', ru: '⯅' },
     upperCaseValue: { en: '⯅', ru: '⯅' },
-    type: 'alphanumeric'
+    type: 'alphanumeric',
   },
   {
     name: 'ShiftRight',
     lowerCaseValue: { en: 'Shift', ru: 'Shift' },
     upperCaseValue: { en: 'Shift', ru: 'Shift' },
     type: 'functional',
-  }
-]
+  },
+];
 
 export const keysRowA = [
   {
@@ -349,8 +349,8 @@ export const keysRowA = [
   },
   {
     name: 'Space',
-    lowerCaseValue: { en: 'Space', ru: 'Space' },
-    upperCaseValue: { en: 'Space', ru: 'Space' },
+    lowerCaseValue: { en: ' ', ru: ' ' },
+    upperCaseValue: { en: ' ', ru: ' ' },
     type: 'alphanumeric',
   },
   {
@@ -382,5 +382,5 @@ export const keysRowA = [
     lowerCaseValue: { en: 'Ctrl', ru: 'Ctrl' },
     upperCaseValue: { en: 'Ctrl', ru: 'Ctrl' },
     type: 'functional',
-  }
-]
+  },
+];

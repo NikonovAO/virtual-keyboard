@@ -1,6 +1,6 @@
-import { Keyboard } from './Keyboard.js';
+import Keyboard from './Keyboard';
 
-export class App {
+export default class App {
   constructor() {
     const header = document.createElement('header');
     header.classList.add('header');
@@ -29,8 +29,7 @@ export class App {
     textarea.cols = 50;
     mainWrapper.append(textarea);
 
-    new Keyboard(mainWrapper);
-
+    const keyboard = new Keyboard(mainWrapper);
+    keyboard.renderKeyboard();
   }
 }
-
