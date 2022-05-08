@@ -363,19 +363,19 @@ export const keysRowA = [
     name: 'ArrowLeft',
     lowerCaseValue: { en: '⯇', ru: '⯇' },
     upperCaseValue: { en: '⯇', ru: '⯇' },
-    type: { en: 'symbol', ru: 'symbol' },
+    type: 'alphanumeric',
   },
   {
     name: 'ArrowDown',
     lowerCaseValue: { en: '⯆', ru: '⯆' },
     upperCaseValue: { en: '⯆', ru: '⯆' },
-    type: { en: 'symbol', ru: 'symbol' },
+    type: 'alphanumeric',
   },
   {
     name: 'ArrowRight',
     lowerCaseValue: { en: '⯈', ru: '⯈' },
     upperCaseValue: { en: '⯈', ru: '⯈' },
-    type: { en: 'symbol', ru: 'symbol' },
+    type: 'alphanumeric',
   },
   {
     name: 'ControlRight',

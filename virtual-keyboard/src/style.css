@@ -20,13 +20,31 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+.header__title {
+  font-size: 42px;
+  color: green;
+  text-shadow: 2px 2px 2px grey;
 }
 
 .textarea {
+  width: 835px;
+  height: 150px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+  color: green;
   resize: none;
+  outline: none;
+  border: 1px solid black;
 }
 
+
 .keyboard {
+  width: 835px;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -46,16 +64,28 @@
   border-radius: 5px;
   border: 2px solid green;
   border-style: inset;
-  background-color: rgb(26, 26, 26);
+  background-color: rgb(25, 25, 25);
   color: green;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 600;
+  outline: none;
 }
 
 .keyboard__key:hover {
   border-style: outset;
+  background-color: rgb(45, 45, 45);
+}
+
+.keyboard__key:active {
+  border-style: solid;
+  background-color: rgb(65, 65, 65);
+}
+
+.keyboard .key-active {
+  border-style: solid;
+  background-color: rgb(65, 65, 65);
 }
 
 .key-Backspace {
@@ -84,4 +114,39 @@
 
 .key-Space {
   width: 430px;
+}
+
+.description {
+  color: green;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px grey;
+  font-size: 20px;
+}
+
+.lang__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.lang__change {
+  color: green;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px 20px;
+  background-color: rgb(25, 25, 25);
+  border: 2px solid green;
+  border-radius: 20px;
+  border-style: inset;
+}
+
+.lang__change:hover {
+  border-style: outset;
+  background-color: rgb(45, 45, 45);
+}
+
+.lang__change:active {
+  border-style: solid;
+  background-color: rgb(65, 65, 65);
 }

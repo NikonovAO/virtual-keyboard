@@ -19,8 +19,9 @@ export default class Keyboard {
     keyboard.append(keyboardRowE);
 
     keysRowE.forEach((element) => {
-      const key = new Key(element.name, element.lowerCaseValue.en, keyboardRowE);
+      const key = new Key(element.name, element.lowerCaseValue.en, element.type, keyboardRowE);
       key.renderKey();
+      key.listenerKey();
     });
 
     const keyboardRowD = document.createElement('div');
@@ -29,8 +30,9 @@ export default class Keyboard {
     keyboard.append(keyboardRowD);
 
     keysRowD.forEach((element) => {
-      const key = new Key(element.name, element.lowerCaseValue.en, keyboardRowD);
+      const key = new Key(element.name, element.lowerCaseValue.en, element.type, keyboardRowD);
       key.renderKey();
+      key.listenerKey();
     });
 
     const keyboardRowC = document.createElement('div');
@@ -39,8 +41,9 @@ export default class Keyboard {
     keyboard.append(keyboardRowC);
 
     keysRowC.forEach((element) => {
-      const key = new Key(element.name, element.lowerCaseValue.en, keyboardRowC);
+      const key = new Key(element.name, element.lowerCaseValue.en, element.type, keyboardRowC);
       key.renderKey();
+      key.listenerKey();
     });
 
     const keyboardRowB = document.createElement('div');
@@ -49,8 +52,9 @@ export default class Keyboard {
     keyboard.append(keyboardRowB);
 
     keysRowB.forEach((element) => {
-      const key = new Key(element.name, element.lowerCaseValue.en, keyboardRowB);
+      const key = new Key(element.name, element.lowerCaseValue.en, element.type, keyboardRowB);
       key.renderKey();
+      key.listenerKey();
     });
 
     const keyboardRowA = document.createElement('div');
@@ -59,8 +63,25 @@ export default class Keyboard {
     keyboard.append(keyboardRowA);
 
     keysRowA.forEach((element) => {
-      const key = new Key(element.name, element.lowerCaseValue.en, keyboardRowA);
+      const key = new Key(element.name, element.lowerCaseValue.en, element.type, keyboardRowA);
       key.renderKey();
+      key.listenerKey();
+    });
+  }
+
+  pressButton() {
+    const textarea = document.getElementById('textarea');
+    document.addEventListener('keydown', (e) => {
+      textarea.focus();
+      console.log('e.code = ', e.code);
+      const key = document.querySelector(`.key-${e.code}`);
+      key.classList.add('key-active');
+    });
+    document.addEventListener('keyup', (e) => {
+      e.preventDefault();
+      textarea.focus();
+      const key = document.querySelector(`.key-${e.code}`);
+      key.classList.remove('key-active');
     });
   }
 }

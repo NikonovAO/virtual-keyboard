@@ -1,9 +1,7 @@
 import './style.css';
 import App from './App';
+import changeLang from './changeLang';
 
-new App();
-
-/* document.addEventListener('keypress', (e) => {
-  console.log('e.code = ', e.code);
-  console.log('e.key = ', e.key);
-}); */
+const app = new App();
+app.renderApp();
+changeLang();

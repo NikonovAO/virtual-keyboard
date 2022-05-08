@@ -1,7 +1,7 @@
 import Keyboard from './Keyboard';
 
 export default class App {
-  constructor() {
+  renderApp() {
     const header = document.createElement('header');
     header.classList.add('header');
     document.body.append(header);
@@ -25,11 +25,33 @@ export default class App {
 
     const textarea = document.createElement('textarea');
     textarea.classList.add('textarea');
-    textarea.rows = 5;
-    textarea.cols = 50;
+    textarea.id = 'textarea';
     mainWrapper.append(textarea);
 
     const keyboard = new Keyboard(mainWrapper);
     keyboard.renderKeyboard();
+    keyboard.pressButton();
+
+    const descriptionWin = document.createElement('p');
+    descriptionWin.classList.add('description');
+    descriptionWin.innerHTML = 'Клавиатура создана в операционной системе Windows';
+    mainWrapper.append(descriptionWin);
+
+    const langWrapper = document.createElement('div');
+    langWrapper.classList.add('lang__wrapper');
+    mainWrapper.append(langWrapper);
+
+    const descriptionLang = document.createElement('p');
+    descriptionLang.classList.add('description');
+    descriptionLang.innerHTML = 'Переключение языка: Ctrl + Alt';
+    langWrapper.append(descriptionLang);
+
+    const changeWrapper = document.createElement('button');
+    changeWrapper.type = 'button';
+    changeWrapper.id = 'lang__change';
+    changeWrapper.classList.add('lang__change');
+    const lang = localStorage.getItem('keyboardLang', 'Eng');
+    changeWrapper.innerHTML = `${lang}`;
+    langWrapper.append(changeWrapper);
   }
 }
