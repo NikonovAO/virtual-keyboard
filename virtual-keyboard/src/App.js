@@ -3,6 +3,7 @@ import Keyboard from './Keyboard';
 export default class App {
   renderApp() {
     let lang = localStorage.getItem('keyboardLang');
+
     if (lang !== 'Eng' && lang !== 'Rus') {
       lang = 'Eng';
     }

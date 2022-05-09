@@ -84,7 +84,6 @@ export const keysRowE = [
     type: 'functional',
   },
 ];
-
 export const keysRowD = [
   {
     name: 'Tab',
@@ -171,7 +170,6 @@ export const keysRowD = [
     type: 'alphanumeric',
   },
 ];
-
 export const keysRowC = [
   {
     name: 'CapsLock',
@@ -252,7 +250,6 @@ export const keysRowC = [
     type: 'functional',
   },
 ];
-
 export const keysRowB = [
   {
     name: 'ShiftLeft',
@@ -333,7 +330,6 @@ export const keysRowB = [
     type: 'functional',
   },
 ];
-
 export const keysRowA = [
   {
     name: 'ControlLeft',

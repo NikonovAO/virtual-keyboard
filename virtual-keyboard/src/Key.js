@@ -10,6 +10,7 @@ export default class Key {
     this.key = document.createElement('button');
     this.key.classList.add('keyboard__key');
     this.key.classList.add(`key-${this.name}`);
+
     if (this.type === 'alphanumeric' || this.name === 'ControlLeft' || this.name === 'ControlRight'
     || this.name === 'AltLeft' || this.name === 'AltRight') {
       this.key.innerHTML = this.value;

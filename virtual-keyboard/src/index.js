@@ -54,6 +54,7 @@ function changeLang() {
       pressButton();
     }
   });
+
   document.addEventListener('keydown', (event) => {
     if (event.ctrlKey && event.altKey) {
       if (localStorage.getItem('keyboardLang') === 'Eng') {
