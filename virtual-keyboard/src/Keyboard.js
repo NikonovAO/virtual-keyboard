@@ -6,82 +6,80 @@ import {
 export default class Keyboard {
   constructor(target) {
     this.target = target;
+    this.textarea = document.getElementById('textarea');
+    this.keys = [];
+    this.keyboard;
   }
 
   renderKeyboard() {
-    const keyboard = document.createElement('div');
-    keyboard.classList.add('keyboard');
-    this.target.append(keyboard);
+    this.keys = [];
+    if(this.keyboard) {
+      this.keyboard.remove();
+    }
+    let lang = localStorage.getItem('keyboardLang');
+    this.keyboard = document.createElement('div');
+    this.keyboard.classList.add('keyboard');
+    this.target.append(this.keyboard);
 
     const keyboardRowE = document.createElement('div');
     keyboardRowE.classList.add('keyboard__row');
     keyboardRowE.classList.add('row-E');
-    keyboard.append(keyboardRowE);
+    this.keyboard.append(keyboardRowE);
 
     keysRowE.forEach((element) => {
-      const key = new Key(element.name, element.lowerCaseValue.en, element.type, keyboardRowE);
-      key.renderKey();
-      key.listenerKey();
+      this.key = new Key(element.name, element.lowerCaseValue[lang], element.type, keyboardRowE);
+      this.key.renderKey();
+      this.key.listenerKey();
+      this.keys.push(this.key);
     });
 
     const keyboardRowD = document.createElement('div');
     keyboardRowD.classList.add('keyboard__row');
     keyboardRowD.classList.add('row-D');
-    keyboard.append(keyboardRowD);
+    this.keyboard.append(keyboardRowD);
 
     keysRowD.forEach((element) => {
-      const key = new Key(element.name, element.lowerCaseValue.en, element.type, keyboardRowD);
-      key.renderKey();
-      key.listenerKey();
+      this.key = new Key(element.name, element.lowerCaseValue[lang], element.type, keyboardRowD);
+      this.key.renderKey();
+      this.key.listenerKey();
+      this.keys.push(this.key);
     });
 
     const keyboardRowC = document.createElement('div');
     keyboardRowC.classList.add('keyboard__row');
     keyboardRowC.classList.add('row-C');
-    keyboard.append(keyboardRowC);
+    this.keyboard.append(keyboardRowC);
 
     keysRowC.forEach((element) => {
-      const key = new Key(element.name, element.lowerCaseValue.en, element.type, keyboardRowC);
-      key.renderKey();
-      key.listenerKey();
+      this.key = new Key(element.name, element.lowerCaseValue[lang], element.type, keyboardRowC);
+      this.key.renderKey();
+      this.key.listenerKey();
+      this.keys.push(this.key);
     });
 
     const keyboardRowB = document.createElement('div');
     keyboardRowB.classList.add('keyboard__row');
     keyboardRowB.classList.add('row-B');
-    keyboard.append(keyboardRowB);
+    this.keyboard.append(keyboardRowB);
 
     keysRowB.forEach((element) => {
-      const key = new Key(element.name, element.lowerCaseValue.en, element.type, keyboardRowB);
-      key.renderKey();
-      key.listenerKey();
+      this.key = new Key(element.name, element.lowerCaseValue[lang], element.type, keyboardRowB);
+      this.key.renderKey();
+      this.key.listenerKey();
+      this.keys.push(this.key);
     });
 
     const keyboardRowA = document.createElement('div');
     keyboardRowA.classList.add('keyboard__row');
     keyboardRowA.classList.add('row-A');
-    keyboard.append(keyboardRowA);
+    this.keyboard.append(keyboardRowA);
 
     keysRowA.forEach((element) => {
-      const key = new Key(element.name, element.lowerCaseValue.en, element.type, keyboardRowA);
-      key.renderKey();
-      key.listenerKey();
+      this.key = new Key(element.name, element.lowerCaseValue[lang], element.type, keyboardRowA);
+      this.key.renderKey();
+      this.key.listenerKey();
+      this.keys.push(this.key);
     });
-  }
-
-  pressButton() {
-    const textarea = document.getElementById('textarea');
-    document.addEventListener('keydown', (e) => {
-      textarea.focus();
-      console.log('e.code = ', e.code);
-      const key = document.querySelector(`.key-${e.code}`);
-      key.classList.add('key-active');
-    });
-    document.addEventListener('keyup', (e) => {
-      e.preventDefault();
-      textarea.focus();
-      const key = document.querySelector(`.key-${e.code}`);
-      key.classList.remove('key-active');
-    });
+    return this.keyboard
   }
 }

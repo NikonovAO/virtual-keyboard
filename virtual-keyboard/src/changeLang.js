@@ -1,3 +1,6 @@
+import { app } from ".";
+import pressButton from ".";
+
 export default function changeLang() {
   const changeBtn = document.getElementById('lang__change');
   let bool = true;
@@ -6,10 +9,14 @@ export default function changeLang() {
       changeBtn.innerHTML = 'Rus';
       bool = false;
       localStorage.setItem('keyboardLang', 'Rus');
+      app.keyboard.renderKeyboard();
+      pressButton();
     } else {
       changeBtn.innerHTML = 'Eng';
       bool = true;
       localStorage.setItem('keyboardLang', 'Eng');
+      app.keyboard.renderKeyboard();
+      pressButton();
     }
   });
   document.addEventListener('keydown', (event) => {
@@ -21,6 +28,8 @@ export default function changeLang() {
         localStorage.setItem('keyboardLang', 'Eng');
         changeBtn.innerHTML = 'Eng';
       }
+      app.keyboard.renderKeyboard();
+      pressButton();
     }
   });
 }

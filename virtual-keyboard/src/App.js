@@ -2,6 +2,8 @@ import Keyboard from './Keyboard';
 
 export default class App {
   renderApp() {
+    let lang = localStorage.getItem('keyboardLang');
+
     const header = document.createElement('header');
     header.classList.add('header');
     document.body.append(header);
@@ -28,9 +30,12 @@ export default class App {
     textarea.id = 'textarea';
     mainWrapper.append(textarea);
 
-    const keyboard = new Keyboard(mainWrapper);
-    keyboard.renderKeyboard();
-    keyboard.pressButton();
+    const keyboardWrapper = document.createElement('div');
+    keyboardWrapper.classList.add('keyboard__wrapper');
+    mainWrapper.append(keyboardWrapper);
+
+    this.keyboard = new Keyboard(keyboardWrapper);
+    this.keyboard.renderKeyboard();
 
     const descriptionWin = document.createElement('p');
     descriptionWin.classList.add('description');
@@ -50,8 +55,10 @@ export default class App {
     changeWrapper.type = 'button';
     changeWrapper.id = 'lang__change';
     changeWrapper.classList.add('lang__change');
-    const lang = localStorage.getItem('keyboardLang', 'Eng');
+    
     changeWrapper.innerHTML = `${lang}`;
     langWrapper.append(changeWrapper);
+
+    return this.keyboard;
   }
 }
