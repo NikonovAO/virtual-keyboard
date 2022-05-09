@@ -2,7 +2,7 @@ import Keyboard from './Keyboard';
 
 export default class App {
   renderApp() {
-    let lang = localStorage.getItem('keyboardLang');
+    const lang = localStorage.getItem('keyboardLang');
 
     const header = document.createElement('header');
     header.classList.add('header');
@@ -55,7 +55,7 @@ export default class App {
     changeWrapper.type = 'button';
     changeWrapper.id = 'lang__change';
     changeWrapper.classList.add('lang__change');
-    
+
     changeWrapper.innerHTML = `${lang}`;
     langWrapper.append(changeWrapper);
 

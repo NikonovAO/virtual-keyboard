@@ -10,13 +10,13 @@ export default class Key {
     this.key = document.createElement('button');
     this.key.classList.add('keyboard__key');
     this.key.classList.add(`key-${this.name}`);
-    if(this.type === 'alphanumeric' || this.name === 'ControlLeft' || this.name === 'ControlRight'
+    if (this.type === 'alphanumeric' || this.name === 'ControlLeft' || this.name === 'ControlRight'
     || this.name === 'AltLeft' || this.name === 'AltRight') {
       this.key.innerHTML = this.value;
     } else {
       this.key.innerHTML = this.name;
     }
-    
+
     this.target.append(this.key);
     return this.key;
   }
@@ -24,10 +24,8 @@ export default class Key {
   listenerKey() {
     this.key.addEventListener('click', () => {
       const textarea = document.getElementById('textarea');
-      console.log(this.value);
       textarea.focus();
       if (this.type === 'alphanumeric') {
-        console.log(textarea.value);
         textarea.value += this.value;
       }
     });

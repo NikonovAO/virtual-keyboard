@@ -8,15 +8,15 @@ export default class Keyboard {
     this.target = target;
     this.textarea = document.getElementById('textarea');
     this.keys = [];
-    this.keyboard;
+    this.keyboard = document.createElement('div');
   }
 
   renderKeyboard() {
     this.keys = [];
-    if(this.keyboard) {
+    if (this.keyboard) {
       this.keyboard.remove();
     }
-    let lang = localStorage.getItem('keyboardLang');
+    const lang = localStorage.getItem('keyboardLang');
     this.keyboard = document.createElement('div');
     this.keyboard.classList.add('keyboard');
     this.target.append(this.keyboard);
@@ -80,6 +80,6 @@ export default class Keyboard {
       this.key.listenerKey();
       this.keys.push(this.key);
     });
-    return this.keyboard
+    return this.keyboard;
   }
 }

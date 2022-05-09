@@ -1,5 +1,4 @@
-import { app } from ".";
-import pressButton from ".";
+import pressButton, { app } from '.';
 
 export default function changeLang() {
   const changeBtn = document.getElementById('lang__change');
