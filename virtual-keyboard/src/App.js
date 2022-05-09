@@ -2,7 +2,10 @@ import Keyboard from './Keyboard';
 
 export default class App {
   renderApp() {
-    const lang = localStorage.getItem('keyboardLang');
+    let lang = localStorage.getItem('keyboardLang');
+    if (lang !== 'Eng' || lang !== 'Rus') {
+      lang = 'Eng';
+    }
 
     const header = document.createElement('header');
     header.classList.add('header');
