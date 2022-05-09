@@ -17,7 +17,7 @@ export default class Keyboard {
       this.keyboard.remove();
     }
     let lang = localStorage.getItem('keyboardLang');
-    if (lang !== 'Eng' || lang !== 'Rus') {
+    if (lang !== 'Eng' && lang !== 'Rus') {
       lang = 'Eng';
     }
     this.keyboard = document.createElement('div');
