@@ -1,14 +1,11 @@
 import './style.css';
 import App from './App';
-import changeLang from './changeLang';
 
 const app = new App();
 app.renderApp();
-changeLang();
 
 export default function pressButton() {
   const textarea = document.getElementById('textarea');
-
   document.onkeydown = function keyDown(event) {
     event.preventDefault();
     textarea.focus();
@@ -37,8 +34,41 @@ export default function pressButton() {
       item.key.classList.remove('key-active');
     }
   };
-
-  pressButton();
 }
 
+function changeLang() {
+  const changeBtn = document.getElementById('lang__change');
+  let bool = true;
+  changeBtn.addEventListener('click', () => {
+    if (bool) {
+      changeBtn.innerHTML = 'Rus';
+      bool = false;
+      localStorage.setItem('keyboardLang', 'Rus');
+      app.keyboard.renderKeyboard();
+      pressButton();
+    } else {
+      changeBtn.innerHTML = 'Eng';
+      bool = true;
+      localStorage.setItem('keyboardLang', 'Eng');
+      app.keyboard.renderKeyboard();
+      pressButton();
+    }
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.ctrlKey && event.altKey) {
+      if (localStorage.getItem('keyboardLang') === 'Eng') {
+        localStorage.setItem('keyboardLang', 'Rus');
+        changeBtn.innerHTML = 'Rus';
+      } else {
+        localStorage.setItem('keyboardLang', 'Eng');
+        changeBtn.innerHTML = 'Eng';
+      }
+      app.keyboard.renderKeyboard();
+      pressButton();
+    }
+  });
+}
+
+pressButton();
+changeLang();
 export { app };

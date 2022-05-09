@@ -28,6 +28,17 @@ export default class Key {
       if (this.type === 'alphanumeric') {
         textarea.value += this.value;
       }
+      if (this.name === 'Backspace') {
+        let str = textarea.value;
+        str = str.slice(0, str.length - 1);
+        textarea.value = str;
+      }
+      if (this.name === 'Enter') {
+        textarea.value += '\n';
+      }
+      if (this.name === 'Tab') {
+        textarea.value += '\t';
+      }
     });
   }
 }
