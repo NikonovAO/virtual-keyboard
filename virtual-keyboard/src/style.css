@@ -42,7 +42,6 @@
   border: 1px solid black;
 }
 
-
 .keyboard {
   width: 835px;
   display: flex;
@@ -71,6 +70,7 @@
   align-items: center;
   font-weight: 600;
   outline: none;
+  transition: all 0.5s;
 }
 
 .keyboard__key:hover {
@@ -139,6 +139,7 @@
   border: 2px solid green;
   border-radius: 20px;
   border-style: inset;
+  transition: all 0.5s;
 }
 
 .lang__change:hover {
